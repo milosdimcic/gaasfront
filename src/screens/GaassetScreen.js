@@ -7,7 +7,6 @@ import { useParams } from 'react-router-dom'
 import axios from "axios";
 
 function GaassetScreen() {
-
  
     const [gaasset, setGaasset] = useState([]);
     const { id } = useParams();    
@@ -28,6 +27,7 @@ function GaassetScreen() {
   return (
     <div>
       <Row>
+        <Col md={6}>Image goes here</Col>
         <Col md={3}>
           <ListGroup variant="flush">
             <ListGroup.Item>
@@ -35,7 +35,6 @@ function GaassetScreen() {
             </ListGroup.Item>
           </ListGroup>
         </Col>
-        <Col md={6}>Image goes here</Col>
         <Col md={3}>
           <ListGroup variant="flush">
             <ListGroup.Item>
