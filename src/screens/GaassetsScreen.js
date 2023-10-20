@@ -5,7 +5,6 @@ import Gaasset from "../components/Gaasset";
 import Loader from "../components/Loader";
 import Message from "../components/Message";
 import { listGaassets } from "../actions/gaassetActions";
-import axios from "axios";
 
 function GaassetsScreen() {
   const dispatch = useDispatch();

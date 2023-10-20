@@ -1,10 +1,11 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension'
-import { gaassetListReducer } from './reducers/gaassetReducers'
+import { gaassetListReducer, gaassetDetailsReducer } from './reducers/gaassetReducers'
 
 const reducer = combineReducers({
-    gaassetList: gaassetListReducer
+    gaassetList: gaassetListReducer,
+    gaassetDetails: gaassetDetailsReducer,
 });
 
 const initialState = {};
