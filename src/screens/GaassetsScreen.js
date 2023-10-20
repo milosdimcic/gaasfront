@@ -25,7 +25,7 @@ function GaassetsScreen() {
       ) : (
         <Row>
           {gaassets.map((gaasset) => (
-            <Col key={gaasset._id} sm={12} md={6} lg={3} xl={3}>
+            <Col key={gaasset.id} sm={12} md={6} lg={3} xl={3}>
               <Gaasset gaasset={gaasset} />
             </Col>
           ))}

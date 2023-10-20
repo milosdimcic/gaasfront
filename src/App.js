@@ -17,7 +17,7 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
-      <main className="py-3">
+      <main className="py-3 gBack">
         <Container>
           <Routes>
             <Route path="/" element={<GaassetsScreen />} exact />

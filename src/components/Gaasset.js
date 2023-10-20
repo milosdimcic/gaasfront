@@ -7,9 +7,8 @@ function Gaasset({ gaasset }) {
   return (
     <Card className="my-3 p-3 rounded">
       <Link to={`/gaasset/${gaasset.id}`}>
-        <Card.Img src={gaasset.image} />
-        <Card.Body>
-            <Link to={`/gaasset/${gaasset.id}`}>
+        <Card.Img src={gaasset.thumbnail_img} />
+        <Card.Body>            
                 <Card.Title as="div">
                     <strong>{gaasset.name}</strong>
                 </Card.Title>
@@ -21,8 +20,7 @@ function Gaasset({ gaasset }) {
                 </Card.Text>
                 <Card.Text as="h3">
                     {gaasset.price}
-                </Card.Text>
-            </Link>
+                </Card.Text>            
         </Card.Body>
       </Link>
     </Card>

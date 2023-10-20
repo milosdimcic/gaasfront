@@ -1,5 +1,5 @@
 main{
-  min-height: 80vh;
+  min-height: 90vh;
 }
 
 h3{
@@ -8,4 +8,8 @@ h3{
 
 .rating span{
   margin: 0.1.rem;  
+}
+
+.gBack{
+  background: radial-gradient(circle closest-side at center, rgba(64, 64, 64, 1) 0%, rgba(39, 43, 48, 1) 100%);
 }
