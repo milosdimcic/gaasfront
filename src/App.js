@@ -11,7 +11,9 @@ import Footer from "./components/Footer";
 import HomeScreen from "./screens/HomeScreen";
 import GaassetsScreen from "./screens/GaassetsScreen";
 import GaassetScreen from "./screens/GaassetScreen";
+import CartScreen from "./screens/CartScreen";
 import Gaasset from "./components/Gaasset";
+
 
 function App() {
   return (
@@ -22,6 +24,7 @@ function App() {
           <Routes>
             <Route path="/" element={<GaassetsScreen />} exact />
             <Route path="/gaasset/:id" element={<GaassetScreen />} />
+            <Route path="/cart/:id?" element={<CartScreen />} />            
           </Routes>
         </Container>
       </main>

@@ -13,6 +13,7 @@ function ProfileImage({ profile }) {
           />
         )}
       </Col>
+      {/* <Col>{profile && profile.name && <p>{profile.name}</p>}</Col> */}
     </Row>
   );
 }

@@ -29,6 +29,7 @@ export const listGaassets = () => async (dispatch) => {
   }
 };
 
+//This is the action for the single gaasset
 export const listGaassetDetails = (id) => async (dispatch) => {
   try {
     dispatch({ type: GAASSET_DETAILS_REQUEST });

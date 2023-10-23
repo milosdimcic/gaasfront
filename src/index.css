@@ -1,5 +1,5 @@
 main{
-  min-height: 90vh;
+  min-height: 85vh;
 }
 
 h3{
@@ -12,4 +12,27 @@ h3{
 
 .gBack{
   background: radial-gradient(circle closest-side at center, rgba(64, 64, 64, 1) 0%, rgba(39, 43, 48, 1) 100%);
+}
+
+.gaasset-description{
+  max-height: 600px;
+  overflow: auto;
+}
+
+/*============= Scrollbar override========================*/
+::-webkit-scrollbar {
+  width: 10px;
+  /* Set scrollbar width */
+  scrollbar-width: thin;
+  /* FIREFOX  */
+}
+
+/* Thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background-color: #EAA000;
+  /* Set thumb background color */
+  scrollbar-color: #ff0000 transparent;
+  /* FIREFOX */
+  border-radius: 6px;
+  /* Rounded corners for thumb */
 }

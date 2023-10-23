@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import {
   Row,
   Col,
@@ -15,14 +15,14 @@ import Rating from "../components/Rating";
 import Loader from "../components/Loader";
 import Message from "../components/Message";
 import gaassets from "../gaassets";
-import { useParams } from "react-router-dom";
 import { listGaassetDetails } from "../actions/gaassetActions";
 import ProfileImage from "../components/ProfileImage";
 
-function GaassetScreen() {
+function GaassetScreen(history) {
   const dispatch = useDispatch();
   // const [gaasset, setGaasset] = useState([]);
   const { id } = useParams();
+  let navigate = useNavigate();
   const gaassetDetails = useSelector((state) => state.gaassetDetails);
   const { loading, error, gaasset } = gaassetDetails;
 
@@ -30,8 +30,9 @@ function GaassetScreen() {
     dispatch(listGaassetDetails(id));
   }, [dispatch]);
 
-  // const {id} = useParams();
-  // const gaasset = gaassets.find((p) => p._id == id);
+  const addToCartHandler = () =>{
+    navigate(`/cart/${id}`)
+  }
 
   return (
     <div>
@@ -65,7 +66,7 @@ function GaassetScreen() {
             </Col>
             <Col
               md={4}
-              className="d-flex justify-content-center align-items-center text-center"
+              className="d-flex justify-content-center align-items-center text-center gaasset-description"
             >
               <p>{gaasset.description}</p>
             </Col>
@@ -73,7 +74,12 @@ function GaassetScreen() {
               md={4}
               className="d-flex justify-content-center align-items-center"
             >
-              <Image src={gaasset.thumbnail_img} alt={gaasset.name}></Image>
+              <Image
+                src={gaasset.thumbnail_img}
+                alt={gaasset.name}
+                fluid
+                rounded
+              ></Image>
             </Col>
             <Col
               md={4}
@@ -100,7 +106,13 @@ function GaassetScreen() {
               style={{ height: "100px" }}
               className="d-flex justify-content-center align-items-center"
             >
-              Cell 9
+              <Button
+                onClick={addToCartHandler}
+                className="btn-block"
+                type="button"
+              >
+                Add to Cart
+              </Button>
             </Col>
           </Row>
           {/* <Row>
@@ -125,3 +137,10 @@ function GaassetScreen() {
 }
 
 export default GaassetScreen;
+
+/*MY NOTES
+
+useSelector is used to actually pull the Data from the state
+
+
+*/
