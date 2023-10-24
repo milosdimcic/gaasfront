@@ -22,8 +22,8 @@ export const listGaassets = () => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: GAASSET_LIST_FAIL,
-      payload: error.response && error.response.data.message
-        ? error.response.data.message
+      payload: error.response && error.response.data.message.detail
+        ? error.response.data.message.detail
         : error.message,
     });
   }
@@ -44,8 +44,8 @@ export const listGaassetDetails = (id) => async (dispatch) => {
     dispatch({
       type: GAASSET_DETAILS_FAIL,
       payload:
-        error.response && error.response.data.message
-          ? error.response.data.message
+        error.response && error.response.data.message.detail
+          ? error.response.data.message.detail
           : error.message,
     });
   }
