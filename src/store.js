@@ -3,13 +3,15 @@ import thunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import { gaassetListReducer, gaassetDetailsReducer } from './reducers/gaassetReducers'
 import { cartReducer } from './reducers/cartReducers'
-import { userLoginReducer } from './reducers/userReducers'
+import { userLoginReducer, userRegisterReducer, userDetailsReducer } from './reducers/userReducers'
 
 const reducer = combineReducers({
     gaassetList: gaassetListReducer,
     gaassetDetails: gaassetDetailsReducer,
     cart: cartReducer,
-    userLogin: userLoginReducer,    
+    userLogin: userLoginReducer,   
+    userRegister: userRegisterReducer, 
+    userDetails: userDetailsReducer,
 });
 
 const cartItemsFromStorage = localStorage.getItem('cartItems') ?
